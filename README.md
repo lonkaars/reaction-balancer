@@ -4,5 +4,5 @@ A simple tool for lazy people, I'm very lazy myself and copied the actual balanc
 
 ## Open :
 
-[link](https://lonkaars.github.io/reaction-balancer)
+[link](https://lonkaars.github.io/reaction-balancer/)
 
