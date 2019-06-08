@@ -1,0 +1,197 @@
+body {
+    --c-1: #fff;
+    --c-2: #0008;
+    --c-3: #000;
+    --c-4: #ddd;
+    --c-5: #bbb;
+    --c-6: #0008;
+    --c-7: #0003;
+    --c-8: #0007;
+    --c-9: #0008;
+    --p-1: 130px;
+
+    background: var(--c-1);
+    transition: .1s;
+    margin: 0;
+}
+
+body * {
+    transition: .1s;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 25px -8px var(--c-2);
+    background: var(--c-1);
+    width: 412px;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal !important;
+    margin: 0;
+}
+
+.spacer {
+    height: 10px;
+}
+
+.reactionUnsolved {
+    resize: none;
+    width: 100% !important;
+    font-family: 'Google Sans Medium';
+    color: var(--c-3);
+    border: 0;
+    background: var(--c-4);
+    border-radius: 3px;
+    font-size: 14pt;
+    overflow: hidden;
+}
+
+.material-icons {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-touch-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: var(--c-3);
+    cursor: pointer;
+}
+
+.header {
+    font-family: 'Google Sans Bold';
+    color: var(--c-3);
+    font-size: 32pt;
+}
+
+.subheader {
+    font-family: 'Google Sans Bold';
+    color: var(--c-3);
+    font-size: 18pt;
+}
+
+.explanation {
+    font-family: 'Google Sans';
+    color: var(--c-3);
+    font-size: 14pt;
+}
+
+.solveButton:hover,
+.reactionUnsolved:hover {
+    background: var(--c-5);
+}
+
+.solveButton {
+    background: var(--c-4);
+    color: var(--c-3);
+    font-size: 14pt;
+    padding: 5px;
+    border-radius: 3px;
+    border: 0;
+    font-family: 'Google Sans Medium';
+    cursor: pointer;
+}
+
+.answer {
+    font-family: 'Google Sans';
+    font-size: 15pt;
+    color: var(--c-3);
+}
+
+.answer .reactionSeperator {
+    color: var(--c-6);
+    padding: 0 6px;
+}
+
+.answer .elemIndex {
+    padding: 0px 5px;
+    border: 2px solid var(--c-8);
+    background: var(--c-7);
+    border-radius: 5px;
+}
+
+@media (max-width: 425px) {
+    .window {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0px 8px 25px -8px var(--c-2);
+        background: var(--c-1);
+        height: calc(100vh - var(--p-1) - 80px);
+        width: calc(100vw - var(--p-1));
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .helpWindow {
+        bottom: -500px;
+        left: 0 !important;
+        transform: translateX(0) translateY(0) !important;
+        border-radius: 0;
+        box-shadow: 0px 8px 25px -8px var(--c-2);
+        background: var(--c-1);
+        width: calc(100vw - 40px) !important;
+        z-index: 5;
+    }
+}
+
+b {
+    font-family: 'Google Sans Bold';
+}
+
+.info {
+    display: inline-flex;
+    vertical-align: -20%;
+    margin-left: 10px;
+    color: var(--c-3);
+    cursor: pointer;
+}
+
+.helpWindow {
+    position: absolute;
+    bottom: -500px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 8px 25px -8px var(--c-2);
+    background: var(--c-1);
+    width: 412px;
+    z-index: 5;
+}
+
+.helpShade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--c-9);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+::selection {
+    color: var(--c-1);
+    background: var(--c-3);
+}

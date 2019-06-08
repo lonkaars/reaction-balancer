@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reaction Balancer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='googleSans.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='solver.js'></script>
+    <script src="https://rawgit.com/juliangarnier/anime/master/lib/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div class="window">
+        <h1 class="header">Reaction Balancer</h1>
+        <div class="spacer"></div>
+        <div class="formContainer">
+            <form>
+                <span class="explanation">Reaction in this form: <b>CH4+O2=CO2+H2O</b></span><i class="material-icons info" onclick="showHelp()">help_outline</i><br>
+                <div class="spacer"></div>
+                <textarea class="reactionUnsolved" spellcheck="false" draggable="false"></textarea><br>
+                <button type="button" onclick="solveReaction()" class="solveButton">Solve!</button>
+                <div class="spacer"></div>
+                <div class="answer"></div>
+            </form>
+        </div>
+    </div>
+    <i class="darkModeToggle material-icons" onclick="toggleDarkMode()">brightness_medium</i>
+    <div class="helpShade" onclick="hideHelp()"></div>
+    <div class="helpWindow">
+        <h1 class="header">Help</h1>
+        <h2 class="subheader">How to enter the reaction</h2>
+        <p class="explanation">You enter the reaction as [element index](element)[element coefficient]+[another element]=[resulting elements], you need to enter the reaction without spaces. Because of elements like Aluminum (Al), or Chlorine (Cl), capitalization is important. A few examples of correctly entered reactions are:<br><br><b>CH4+O2=CO2+H2O<br>Al+O2=AlO<br>NH3+NO=N2+H2O<br>CON2H4=C3N6H6+CO2+NH3</b></p>
+    </div>
+</body>
+
+</html>
